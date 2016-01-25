@@ -9,8 +9,8 @@ function pipe () {
   return reduce(kestrel, args[0], rest(args))
 }
 
-function rest (ar) {
-  return ar.slice(1)
+function rest (array) {
+  return array.slice(1)
 }
 
 function reduce (fn, acc, list) {
