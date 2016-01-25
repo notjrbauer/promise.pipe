@@ -70,6 +70,15 @@ test('it should persist context with IO', function (t) {
   })
 })
 
+test('it should accept an array of promises', function (t) {
+  var addThreeAsync = pipe([addAsync, addAsync, addAsync])
+
+  t.ok(addThreeAsync)
+  return addThreeAsync(0).then(function (result) {
+    t.equal(result, 3)
+  })
+})
+
 test('it should fail with 0 arguments', function (t) {
   try { pipe() } catch (err) {
     t.ok(err)

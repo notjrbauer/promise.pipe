@@ -1,8 +1,11 @@
 module.exports = pipe
 
 function pipe () {
-  var args = [].slice.apply(arguments)
   if (!arguments.length) throw new Error('pipe requires one or more arguments')
+  var args = Array.isArray(arguments[0]) 
+    ? arguments[0]
+    : [].slice.apply(arguments)
+
   return reduce(kestrel, args[0], rest(args))
 }
 
