@@ -1,6 +1,6 @@
 {
   "name": "promise.pipe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Performs left to right composition of one or more functions whom return promises",
   "main": "index.js",
   "keywords": [
