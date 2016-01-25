@@ -23,7 +23,7 @@ addThree(0)
 
 ## API
 
-#### `pipe(Array<Function<Promise>>, or Function<Promise>)` -> `promise`
+#### `pipe(callbacks..., or Array<callbacks>)` -> `promise`
 
 Runs multiple promise-returning functions in a series, passing each result to the next defined promise-returning function.  
 
